@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://switcher/switcher.tscn" type="PackedScene" id=1]
+[ext_resource path="res://controller/controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/game.gd" type="Script" id=3]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Switchers" type="Node2D" parent="."]
+
+[node name="Switcher1" parent="Switchers" instance=ExtResource( 1 )]
+scale = Vector2( 8, 8 )
+
+[node name="Controllers" type="Node2D" parent="."]
+
+[node name="Controller1" parent="Controllers" instance=ExtResource( 2 )]
+scale = Vector2( 5, 5 )
+switcher = "Switcher1"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

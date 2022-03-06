@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menu/menu-ui.tres" type="DynamicFont" id=1]
+[ext_resource path="res://menu/menu-ui.gd" type="Script" id=2]
+
+[node name="MenuUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleMarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+margin_bottom = 156.0
+custom_constants/margin_top = 64
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="TitleMarginContainer"]
+margin_top = 64.0
+margin_right = 720.0
+margin_bottom = 220.0
+
+[node name="Label" type="Label" parent="TitleMarginContainer/CenterContainer"]
+margin_left = 112.0
+margin_right = 608.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 1 )
+text = "Switcher"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -510.0
+custom_constants/margin_bottom = 128
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 720.0
+margin_bottom = 382.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 97.0
+margin_right = 622.0
+margin_bottom = 382.0
+custom_constants/separation = 64
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_right = 525.0
+margin_bottom = 156.0
+custom_fonts/font = ExtResource( 1 )
+text = "Score - 0"
+
+[node name="StartButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 220.0
+margin_right = 525.0
+margin_bottom = 382.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
