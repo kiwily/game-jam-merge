@@ -1,6 +1,6 @@
 extends Control
 
-export (String) var game_scene_path : String = "res://game/game.tscn"
+export (String) var game_scene_path : String = "res://game/game-ui.tscn"
 
 func _ready():
 	$MarginContainer/CenterContainer/VBoxContainer/Label.text = "Score - %d" % GameManager.score
