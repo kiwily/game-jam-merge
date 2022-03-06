@@ -4,18 +4,18 @@
 
 ```
 >>> cloc game
-      24 text files.
+      27 text files.
       12 unique files.                              
-      21 files ignored.
+      26 files ignored.
 
-github.com/AlDanial/cloc v 1.92  T=0.02 s (790.0 files/s, 18895.0 lines/s)
+github.com/AlDanial/cloc v 1.92  T=0.02 s (594.9 files/s, 20177.3 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Godot Scene                      4             33              0            111
-GDScript                         6             34              2             92
+Godot Scene                      4             43              0            216
+GDScript                         6             33              2             98
 Godot Resource                   2              4              0             11
 -------------------------------------------------------------------------------
-SUM:                            12             71              2            214
+SUM:                            12             80              2            325
 -------------------------------------------------------------------------------
 ```

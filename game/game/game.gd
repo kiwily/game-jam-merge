@@ -16,11 +16,13 @@ func _ready() -> void:
 
 func _on_Controller_Switch(state : int, controller : Node2D, switcher : Node2D) -> void:
 	if state == switcher.state:
+		controller.animation_player.play("correct")
 		controller.change_state()
 		switcher.reset_timer()
 		switcher.change_state()
 		GameManager.score += 1
-
+	else:
+		controller.animation_player.play("wrong")
 
 func _on_Timer_timeout():
 	SceneLoader.goto_scene("res://menu/menu-ui.tscn")

@@ -6,7 +6,9 @@ export (String) var switcher : String
 
 var state : int = -1
 
-onready var sprite : Sprite = $Sprite
+onready var sprite : Sprite = $Node2D/Sprite
+onready var animation_player : AnimationPlayer = $AnimationPlayer
+onready var audio_stream_player_click : AudioStreamPlayer = $AudioStreamPlayerClick
 
 func _ready():
 	change_state()
@@ -24,4 +26,5 @@ func update_state() -> void:
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventScreenTouch and event.pressed:
+		audio_stream_player_click.play()
 		emit_signal("switch", state)

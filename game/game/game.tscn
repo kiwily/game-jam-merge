@@ -15,6 +15,12 @@ scale = Vector2( 8, 8 )
 [node name="Controllers" type="Node2D" parent="."]
 
 [node name="Controller1" parent="Controllers" instance=ExtResource( 2 )]
+position = Vector2( 0, 256 )
+scale = Vector2( 5, 5 )
+switcher = "Switcher1"
+
+[node name="Controller2" parent="Controllers" instance=ExtResource( 2 )]
+position = Vector2( 0, -256 )
 scale = Vector2( 5, 5 )
 switcher = "Switcher1"
 
