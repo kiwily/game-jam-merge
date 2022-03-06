@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/2 - Big Giant Trees - Gotanda.mp3-35b6f5ca8bd83dd5a4fcd69d67a6d313.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/2 - Big Giant Trees - Gotanda.mp3"
+dest_files=[ "res://.import/2 - Big Giant Trees - Gotanda.mp3-35b6f5ca8bd83dd5a4fcd69d67a6d313.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
