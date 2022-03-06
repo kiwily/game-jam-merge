@@ -1,4 +1,3 @@
-
 # Godot-specific ignores
 .import/
 export.cfg
@@ -9,8 +8,5 @@ export_presets.cfg
 data_*/
 .DS_Store
 
-# Android
-android
-
 # Exports
-Exports
+exports/
