@@ -1,21 +1,21 @@
-# Switcher
+# Switcher - Proof of Concept - Signals
 
 ### Codebase
 
 ```
 >>> cloc game
-      30 text files.
-      13 unique files.                              
-      30 files ignored.
+      34 text files.
+      15 unique files.                              
+      34 files ignored.
 
-github.com/AlDanial/cloc v 1.92  T=0.02 s (792.6 files/s, 25303.3 lines/s)
+github.com/AlDanial/cloc v 1.92  T=0.06 s (252.3 files/s, 7838.0 lines/s)
 -------------------------------------------------------------------------------
 Language                     files          blank        comment           code
 -------------------------------------------------------------------------------
-Godot Scene                      5             46              0            221
-GDScript                         6             33              2             98
+Godot Scene                      6             49              0            250
+GDScript                         7             38              2            112
 Godot Resource                   2              4              0             11
 -------------------------------------------------------------------------------
-SUM:                            13             83              2            330
+SUM:                            15             91              2            373
 -------------------------------------------------------------------------------
 ```
