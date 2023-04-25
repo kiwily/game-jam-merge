@@ -9,13 +9,19 @@ func get_character_next_state(character_state):
 	return states.pick_random()
 
 func get_background_next_state(background_state, character_state):
-	# Make a list that would end during the next combo
+	# list of next states
 	if next_background_states.is_empty():
 		var states = Constants.StateEnum.values().duplicate()
 		var states_size: int = states.size()
-		states.erase(background_state)
 		states.shuffle()
 		
+		# cannot have same background state twice in a row
+		var background_state_index: int = states.find(background_state)
+		if background_state_index == 0:
+			states.pop_front()
+			states.push_back(background_state)
+	
+		# no need to plan further than next match
 		var character_state_index: int = states.find(character_state)
 		next_background_states = states.slice(0, character_state_index + 1)
 	

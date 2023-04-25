@@ -32,8 +32,6 @@ position = Vector2(360, 856)
 [node name="CenterPosition" type="Marker2D" parent="Positions"]
 position = Vector2(360, 680)
 
-[node name="ChangeState" type="Timer" parent="."]
-
 [node name="PauseControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -62,5 +60,4 @@ mouse_filter = 1
 
 [connection signal="score" from="Game/Game" to="." method="score"]
 [connection signal="wrong" from="Game/Game" to="." method="wrong"]
-[connection signal="timeout" from="ChangeState" to="." method="_on_ChangeState_timeout"]
 [connection signal="pressed" from="PauseControl/MarginContainer/Pause" to="." method="_on_Pause_pressed"]
