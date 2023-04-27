@@ -12,10 +12,11 @@ func increment_combos_strike():
 		earn_life()
 	
 	if Constants.combos_strike >= 2:
-		$PostEffect.play_shockwave()
+		$SpeedLines.level = int(Constants.combos_strike / 10)
 		$GameUI.display_bonus_text('x' + str(Constants.combos_strike))
 	
 func reset_combos_strike():
+	$SpeedLines.level = -1
 	Constants.combos_strike = 0
 
 func earn_life():
