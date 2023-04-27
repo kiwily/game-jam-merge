@@ -12,11 +12,9 @@ script = ExtResource("1")
 
 [node name="Game" parent="Game" instance=ExtResource("3")]
 
-[node name="PostEffect" parent="." instance=ExtResource("7")]
-z_index = 1
-position = Vector2(0.317512, -1.33698)
-
 [node name="GameUI" parent="." instance=ExtResource("6_8abi2")]
+
+[node name="PostEffect" parent="." instance=ExtResource("7")]
 
 [connection signal="miss" from="Game/Game" to="." method="_on_game_miss"]
 [connection signal="score" from="Game/Game" to="." method="score"]
